@@ -21,11 +21,15 @@ export function Footer() {
                 </div>
 
                 <div className="flex items-center gap-6">
-                    {['Features', 'Blog', 'Help'].map(link => (
-                        <a key={link} href="#" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
-                            {link}
-                        </a>
-                    ))}
+                    <a href="/privacy" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
+                        Privacy
+                    </a>
+                    <a href="/terms" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
+                        Terms
+                    </a>
+                    <a href="/help" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
+                        Help
+                    </a>
                     <div className="h-4 w-px bg-stone-300 dark:bg-stone-700 mx-2 hidden md:block"></div>
                     <div className="flex gap-4">
                         {['Twitter', 'GitHub', 'Discord'].map((social) => (
