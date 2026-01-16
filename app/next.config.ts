@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'pace'; // GitHub repository name
+const repoName = 'pace-web'; // GitHub repository name
 
 const nextConfig: NextConfig = {
   // Enable static HTML export
