@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
+// Static imports are the most reliable way to handle images with basePath and custom domains
+import heroLight from '@/../public/images/landing/hero-light.png';
+import heroDark from '@/../public/images/landing/hero-dark.png';
+
 export function HeroSection() {
     return (
         <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -75,19 +79,15 @@ export function HeroSection() {
                                 <div className="w-full h-full relative rounded-[1rem] overflow-hidden bg-stone-100 dark:bg-stone-900 border border-stone-300 dark:border-stone-700">
                                     {/* Light Mode Screenshot */}
                                     <Image
-                                        src="/images/landing/hero-light.png"
+                                        src={heroLight}
                                         alt="Pace App Light Mode"
-                                        width={1080}
-                                        height={2400}
                                         className="w-full h-full object-cover dark:hidden"
                                         priority
                                     />
                                     {/* Dark Mode Screenshot */}
                                     <Image
-                                        src="/images/landing/hero-dark.png"
+                                        src={heroDark}
                                         alt="Pace App Dark Mode"
-                                        width={1080}
-                                        height={2400}
                                         className="w-full h-full object-cover hidden dark:block"
                                         priority
                                     />
