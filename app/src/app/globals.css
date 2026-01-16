@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors - Friendly Teal/Sage */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+
+  /* Accent Colors - Muted Coral/Terracotta (Warmth) */
+  --color-accent-50: #fff1f2;
+  --color-accent-100: #ffe4e6;
+  --color-accent-500: #f43f5e;
+  --color-accent-600: #e11d48;
+
+  /* Semantic - Warm / Indie / Calm */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--color-brand-500);
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.3rem;
+
+  --font-sans: var(--font-inter-tight), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-archivo), system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #fafaf9;
+    /* stone-50 */
+    --foreground: #1c1917;
+    /* stone-900 */
+    --primary: #0d9488;
+    /* brand-600 */
+    --primary-foreground: #ffffff;
+    --secondary: #e7e5e4;
+    /* stone-200 */
+    --secondary-foreground: #1c1917;
+    /* stone-900 */
+    --muted: #e7e5e4;
+    /* stone-200 */
+    --muted-foreground: #78716c;
+    /* stone-500 */
+    --card: #ffffff;
+    --card-foreground: #1c1917;
+    /* stone-900 */
+    --border: #e7e5e4;
+    /* stone-200 */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0c0a09;
+      /* stone-950 */
+      --foreground: #fafaf9;
+      /* stone-50 */
+      --primary: #14b8a6;
+      /* brand-500 */
+      --primary-foreground: #0c0a09;
+      /* stone-950 - High contrast text on teal */
+      --secondary: #292524;
+      /* stone-800 */
+      --secondary-foreground: #fafaf9;
+      /* stone-50 */
+      --muted: #1c1917;
+      /* stone-900 */
+      --muted-foreground: #a8a29e;
+      /* stone-400 */
+      --card: #1c1917;
+      /* stone-900 */
+      --card-foreground: #fafaf9;
+      /* stone-50 */
+      --border: #292524;
+      /* stone-800 */
+    }
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight font-bold text-foreground;
+    font-family: var(--font-display);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+}
+
+@utility container-tight {
+  @apply max-w-5xl mx-auto px-6;
+}
+
+@utility glass-panel {
+  @apply bg-white/60 dark:bg-stone-900/60 backdrop-blur-md border border-stone-200/50 dark:border-stone-800/50;
+}
