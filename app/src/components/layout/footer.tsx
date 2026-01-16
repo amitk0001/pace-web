@@ -27,8 +27,8 @@ export function Footer() {
                     <a href="/terms" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
                         Terms
                     </a>
-                    <a href="/help" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
-                        Help
+                    <a href="/contact" className="text-sm font-medium text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200 transition-colors">
+                        Contact
                     </a>
                     <div className="h-4 w-px bg-stone-300 dark:bg-stone-700 mx-2 hidden md:block"></div>
                     <div className="flex gap-4">
