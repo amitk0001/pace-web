@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 export function TestimonialsSection() {
     return (
-        <section className="py-32 bg-stone-100 dark:bg-stone-900/30">
+        <section className="py-24 bg-stone-100 dark:bg-stone-900/30">
             <div className="container-tight">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-stone-900 dark:text-stone-50 tracking-tight">
@@ -49,13 +49,13 @@ export function TestimonialsSection() {
 
 export function CTASection() {
     return (
-        <section className="py-32 relative overflow-hidden bg-white dark:bg-stone-950">
+        <section className="py-24 relative overflow-hidden bg-white dark:bg-stone-950">
             <div className="container-tight relative z-10">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="bg-brand-900 dark:bg-brand-950 text-white rounded-[2.5rem] p-12 sm:p-20 text-center relative overflow-hidden shadow-2xl shadow-brand-900/20"
+                    className="bg-brand-900 dark:bg-brand-950 text-white rounded-[2.5rem] p-10 sm:p-16 text-center relative overflow-hidden shadow-2xl shadow-brand-900/20"
                 >
                     {/* Background decoration */}
                     <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">

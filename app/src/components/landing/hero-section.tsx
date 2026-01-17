@@ -10,7 +10,7 @@ import heroDark from '@/../public/images/landing/hero-dark.png';
 
 export function HeroSection() {
     return (
-        <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+        <section className="relative pt-24 lg:pt-32 overflow-hidden">
             {/* Soft Warm Background Gradient */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-brand-100/40 dark:bg-brand-900/10 rounded-full blur-[120px]" />
@@ -18,16 +18,16 @@ export function HeroSection() {
             </div>
 
             <div className="container-tight relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
 
                     {/* Left Column: Text Content */}
-                    <div className="flex-1 text-center lg:text-left">
+                    <div className="flex-grow lg:w-3/5 text-center lg:text-left z-20 pb-20 lg:pb-32">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-stone-200 shadow-sm dark:bg-stone-900 dark:border-stone-800 mb-8 hover:border-brand-200 transition-colors cursor-default">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 border border-stone-200 shadow-sm backdrop-blur-sm dark:bg-stone-900/60 dark:border-stone-800 mb-8 hover:border-brand-200 transition-colors cursor-default">
                                 <span className="flex relative items-center justify-center">
                                     <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-brand-400 opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-500"></span>
@@ -37,61 +37,65 @@ export function HeroSection() {
                                 </span>
                             </div>
 
-                            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-stone-900 dark:text-stone-50 mb-6 text-balance leading-[1.05]">
+                            <h1 className="text-5xl sm:text-6xl lg:text-[110px] font-bold tracking-tighter text-stone-900 dark:text-stone-50 mb-8 text-balance leading-[0.9] lg:ml-[-2px]">
                                 Build habits, <br />
                                 <span className="text-stone-400 dark:text-stone-600 font-medium italic tracking-normal">
                                     not stress.
                                 </span>
                             </h1>
 
-                            <p className="text-lg sm:text-xl text-stone-600 dark:text-stone-400 leading-relaxed text-balance max-w-xl mx-auto lg:mx-0 mb-8 font-normal">
-                                A simple, distraction-free tracker for the things that matter. No ads, no paywalls, just your progress.
+                            <p className="text-lg sm:text-xl lg:text-2xl text-stone-600 dark:text-stone-400 leading-relaxed text-balance max-w-xl mx-auto lg:mx-0 mb-10 font-normal opacity-90">
+                                A simple, distraction-free tracker for the things that matter. No ads, just your progress.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                                <Button size="lg" className="rounded-full h-12 sm:h-14 px-8 text-base sm:text-lg shadow-xl shadow-brand-500/10 transition-transform hover:-translate-y-0.5">
+                                <Button size="lg" className="rounded-full h-14 lg:h-16 px-10 text-base lg:text-xl shadow-2xl shadow-brand-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
                                     Get Pace Free
                                 </Button>
-                                <Button variant="ghost" size="lg" className="rounded-full h-12 sm:h-14 px-8 text-base sm:text-lg">
+                                <Button variant="ghost" size="lg" className="rounded-full h-14 lg:h-16 px-8 text-base lg:text-xl">
                                     See how it works
                                 </Button>
                             </div>
                         </motion.div>
                     </div>
 
-                    {/* Right Column: Google Pixel Mockup */}
-                    <div className="flex-1 w-full max-w-[320px] sm:max-w-md lg:max-w-full relative flex justify-center lg:justify-end">
+                    {/* Right Column: Centered Mockup with Perfect Mask Fade */}
+                    <div className="flex-grow lg:w-2/5 relative flex items-center justify-center lg:justify-start pb-20 lg:pb-32">
                         <motion.div
-                            initial={{ opacity: 0, x: 40 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative"
+                            initial={{ opacity: 0, x: 40, scale: 0.95 }}
+                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            className="relative lg:pl-12 w-full flex justify-center lg:justify-start group"
+                            style={{
+                                WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 25%)',
+                                maskImage: 'linear-gradient(to top, transparent 0%, black 25%)'
+                            }}
                         >
-                            {/* Phone Mockup Frame - Thinner, refined metallic body */}
-                            <div className="relative mx-auto p-[6px] bg-stone-200 dark:bg-stone-800 rounded-[1.25rem] w-[270px] h-[585px] sm:w-[315px] sm:h-[685px] shadow-xl shadow-stone-200/50 dark:shadow-black/40 ring-1 ring-stone-300 dark:ring-stone-700">
-                                {/* Side Buttons - Minimal */}
-                                <div className="h-[32px] w-[2px] bg-stone-400 dark:bg-stone-600 absolute -start-[2px] top-[64px] rounded-s-md z-30"></div>
-                                <div className="h-[46px] w-[2px] bg-stone-400 dark:bg-stone-600 absolute -start-[2px] top-[114px] rounded-s-md z-30"></div>
-                                <div className="h-[46px] w-[2px] bg-stone-400 dark:bg-stone-600 absolute -start-[2px] top-[168px] rounded-s-md z-30"></div>
-                                <div className="h-[64px] w-[2px] bg-stone-400 dark:bg-stone-600 absolute -end-[2px] top-[132px] rounded-e-md z-30"></div>
+                            {/* The 'Big' Mockup Container - Corrected corner radius and removed offset to fix cutoff */}
+                            <div className="relative p-[8px] pb-0 bg-stone-200 dark:bg-stone-800 rounded-t-[1.5rem] w-[360px] h-[360px] sm:w-[500px] sm:h-[450px] lg:w-[680px] lg:h-[600px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] dark:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)] ring-1 ring-black/5 dark:ring-white/10 overflow-hidden border-b-0">
 
-                                {/* Inner Screen - Matches screenshot width, clips top/bottom naturally */}
-                                <div className="w-full h-full relative rounded-[1rem] overflow-hidden bg-stone-100 dark:bg-stone-900 border border-stone-300 dark:border-stone-700">
+                                {/* Inner Screen - Radius Reduced */}
+                                <div className="w-full h-full relative rounded-t-[1rem] overflow-hidden bg-white dark:bg-stone-950 border border-stone-300 dark:border-stone-800 border-b-0">
+                                    <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-tr from-white/10 to-transparent dark:from-white/5" />
+
                                     {/* Light Mode Screenshot */}
                                     <Image
                                         src={heroLight}
                                         alt="Pace App Light Mode"
-                                        className="w-full h-full object-cover dark:hidden"
+                                        className="w-full h-full object-cover object-top dark:hidden"
                                         priority
                                     />
                                     {/* Dark Mode Screenshot */}
                                     <Image
                                         src={heroDark}
                                         alt="Pace App Dark Mode"
-                                        className="w-full h-full object-cover hidden dark:block"
+                                        className="w-full h-full object-cover object-top hidden dark:block"
                                         priority
                                     />
                                 </div>
+
+                                {/* Mockup Side Details */}
+                                <div className="absolute top-1/4 -right-[4px] w-[5px] h-32 bg-stone-300 dark:bg-stone-700 rounded-l-full" />
                             </div>
                         </motion.div>
                     </div>

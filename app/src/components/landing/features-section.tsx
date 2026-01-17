@@ -70,7 +70,7 @@ const FEATURES = [
 
 export function FeaturesSection() {
     return (
-        <section className="py-32 bg-stone-50 dark:bg-stone-950">
+        <section className="py-24 bg-stone-50 dark:bg-stone-950">
             <div className="container-tight">
                 <div className="text-center max-w-2xl mx-auto mb-20">
                     <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-stone-900 dark:text-stone-50">
