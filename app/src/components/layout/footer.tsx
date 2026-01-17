@@ -1,5 +1,8 @@
 'use client';
 
+import Image from 'next/image';
+import logoMark from '@/../public/logo-mark.svg';
+
 export function Footer() {
     const currentYear = new Date().getFullYear();
 
@@ -8,8 +11,14 @@ export function Footer() {
             <div className="container-tight flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-stone-900 dark:text-stone-100 font-bold text-sm">
-                            P
+                        <div className="w-8 h-8 rounded-lg bg-stone-200 dark:bg-stone-800 flex items-center justify-center">
+                            <Image
+                                src={logoMark}
+                                alt="Pace Logo"
+                                width={24}
+                                height={24}
+                                className="w-full h-full p-1 opacity-80 dark:opacity-60 invert dark:invert-0"
+                            />
                         </div>
                         <span className="font-bold text-stone-900 dark:text-stone-50">
                             Pace

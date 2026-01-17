@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import logoMark from '@/../public/logo-mark.svg';
 
 export function Header() {
     const { scrollY } = useScroll();
@@ -24,8 +26,15 @@ export function Header() {
         >
             <div className="container-tight flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-brand-500 flex items-center justify-center text-white font-bold shadow-lg shadow-brand-500/20">
-                        P
+                    <div className="w-9 h-9 rounded-xl bg-brand-500 flex items-center justify-center shadow-lg shadow-brand-500/20">
+                        <Image
+                            src={logoMark}
+                            alt="Pace Logo"
+                            width={32}
+                            height={32}
+                            priority
+                            className="w-full h-full p-1"
+                        />
                     </div>
                     <span className="font-bold text-lg tracking-tight text-stone-900 dark:text-stone-50">
                         Pace

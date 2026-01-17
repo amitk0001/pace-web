@@ -19,23 +19,23 @@ export const metadata: Metadata = {
   title: "Pace - Build Better Habits, One Day at a Time",
   description: "Track your habits, visualize your progress, and achieve your goals with Pace. Beautiful, privacy-first habit tracking.",
   keywords: ["habit tracker", "productivity", "goal tracking", "routine builder", "habit formation"],
-  authors: [{ name: "Pace Team" }],
+  authors: [{ name: "Amit Nagar" }],
   openGraph: {
     title: "Pace - Habit Tracker",
-    description: "Build better habits with visual progress tracking and smart reminders.",
-    images: ["/Pace-Web/images/og/home.png"],
+    description: "Build better habits with visual progress tracking.",
+    images: ["/logo-full.svg"],
     type: "website",
-    url: "https://yourusername.github.io/Pace-Web/",
+    url: "https://yourpace.site/",
   },
   twitter: {
     card: "summary_large_image",
     title: "Pace - Habit Tracker",
     description: "Build better habits with visual progress tracking.",
-    images: ["/Pace-Web/images/og/twitter.png"],
+    images: ["/logo-full.svg"],
   },
   robots: "index, follow",
   alternates: {
-    canonical: "https://yourusername.github.io/Pace-Web/",
+    canonical: "https://yourpace.site/",
   },
 };
 
