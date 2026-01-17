@@ -16,6 +16,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://yourpace.site"),
   title: "Pace - Build Better Habits, One Day at a Time",
   description: "Track your habits, visualize your progress, and achieve your goals with Pace. Beautiful, privacy-first habit tracking.",
   keywords: ["habit tracker", "productivity", "goal tracking", "routine builder", "habit formation"],
