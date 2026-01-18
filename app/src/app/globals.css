@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors - Friendly Teal/Sage */
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-300: #5eead4;
-  --color-brand-400: #2dd4bf;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
-  --color-brand-900: #134e4a;
-  --color-brand-950: #042f2e;
+  /* Brand Colors - Pace Blue */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bde8f5;
+  --color-brand-300: #83b8dc;
+  --color-brand-400: #4988c4;
+  --color-brand-500: #2d6cb5;
+  --color-brand-600: #1c4d8d;
+  --color-brand-700: #153a6a;
+  --color-brand-800: #0f2854;
+  --color-brand-900: #08142a;
+  --color-brand-950: #040a15;
 
   /* Accent Colors - Muted Coral/Terracotta (Warmth) */
   --color-accent-50: #fff1f2;
@@ -45,52 +45,62 @@
 
 @layer base {
   :root {
-    --background: #fafaf9;
-    /* stone-50 */
-    --foreground: #1c1917;
-    /* stone-900 */
-    --primary: #0d9488;
-    /* brand-600 */
-    --primary-foreground: #ffffff;
-    --secondary: #e7e5e4;
-    /* stone-200 */
-    --secondary-foreground: #1c1917;
-    /* stone-900 */
-    --muted: #e7e5e4;
-    /* stone-200 */
-    --muted-foreground: #78716c;
-    /* stone-500 */
-    --card: #ffffff;
-    --card-foreground: #1c1917;
-    /* stone-900 */
-    --border: #e7e5e4;
-    /* stone-200 */
+    --background: #F8F9FF;
+    /* backgroundLight */
+    --foreground: #191C20;
+    /* onBackgroundLight */
+    --primary: #33618D;
+    /* primaryLight */
+    --primary-foreground: #FFFFFF;
+    /* onPrimaryLight */
+    --secondary: #526070;
+    /* secondaryLight */
+    --secondary-foreground: #FFFFFF;
+    /* onSecondaryLight */
+    --muted: #DFE3EB;
+    /* surfaceVariantLight */
+    --muted-foreground: #42474E;
+    /* onSurfaceVariantLight */
+    --card: #FFFFFF;
+    /* surfaceContainerLowestLight - Cleanest for light mode */
+    --card-foreground: #191C20;
+    /* onSurfaceLight */
+    --border: #C2C7CF;
+    /* outlineVariantLight */
+    --input: #C2C7CF;
+    /* outlineVariantLight */
+    --ring: #33618D;
+    /* primaryLight */
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: #0c0a09;
-      /* stone-950 */
-      --foreground: #fafaf9;
-      /* stone-50 */
-      --primary: #14b8a6;
-      /* brand-500 */
-      --primary-foreground: #0c0a09;
-      /* stone-950 - High contrast text on teal */
-      --secondary: #292524;
-      /* stone-800 */
-      --secondary-foreground: #fafaf9;
-      /* stone-50 */
-      --muted: #1c1917;
-      /* stone-900 */
-      --muted-foreground: #a8a29e;
-      /* stone-400 */
-      --card: #1c1917;
-      /* stone-900 */
-      --card-foreground: #fafaf9;
-      /* stone-50 */
-      --border: #292524;
-      /* stone-800 */
+      --background: #101418;
+      /* backgroundDark */
+      --foreground: #E0E2E8;
+      /* onBackgroundDark */
+      --primary: #9ECAFC;
+      /* primaryDark */
+      --primary-foreground: #003256;
+      /* onPrimaryDark */
+      --secondary: #BAC8DB;
+      /* secondaryDark */
+      --secondary-foreground: #243140;
+      /* onSecondaryDark */
+      --muted: #42474E;
+      /* surfaceVariantDark */
+      --muted-foreground: #C2C7CF;
+      /* onSurfaceVariantDark */
+      --card: #1D2024;
+      /* surfaceContainerDark */
+      --card-foreground: #E0E2E8;
+      /* onSurfaceDark */
+      --border: #42474E;
+      /* outlineVariantDark */
+      --input: #42474E;
+      /* outlineVariantDark */
+      --ring: #9ECAFC;
+      /* primaryDark */
     }
   }
 

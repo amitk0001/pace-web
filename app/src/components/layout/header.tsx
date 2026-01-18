@@ -41,17 +41,6 @@ export function Header() {
                     </span>
                 </div>
 
-                <nav className="hidden md:flex items-center gap-6">
-                    {['Features', 'Blog'].map((item) => (
-                        <a
-                            key={item}
-                            href="#"
-                            className="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors"
-                        >
-                            {item}
-                        </a>
-                    ))}
-                </nav>
 
                 <div>
                     <Button size="sm" className="rounded-full px-5 shadow-lg shadow-stone-900/5 transition-all hover:-translate-y-0.5">
